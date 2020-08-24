@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2{            
+            width: 983px;
+        }
+        ul{
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background-color:black;
+        }
+        li
+        {
+            float:left;
+        }
+        li a, .active, .right{
+            
+            display:inline-block;
+            color:white;
+            text-align:center;
+            padding:20px 58px;
+            text-decoration:none;
+        }
+        li a:hover, .right:hover{
+            background-color:lightcoral;
+        }
+        ul.topnav li a.active{
+            background-color:#4caf50;
+        }
+        li.right{
+            float:right;
+            background-color: firebrick;
+        }
+        a.active{
+            background-color:#4CAF50;
+        }
+        .auto-style3 {
+            width: 100px;
+        }
+        </style>
+</head>
+<body style="background-image:url(Images/Back.jpg); background-attachment:fixed; background-size:cover";>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width:1000px; margin:0  auto;">
+            <tr style="width:1000px; height:100px;border-color:#5f98f3;background-color:wheat">
+              <td style="text-align:right; " class="auto-style3">                   
+                </td>
+                <td style="text-align:center"; class ="auto-style2"; >
+                    <asp:label ID="Label1" runat="server" Text="FURNITUER SHOPPING CENTER" 
+                        Font-Names="Copperplate Gothic Bold" ForeColor="RoyalBlue"
+                        style="font-size:40px;"></asp:label>
+                    <br /><b>&nbsp;&nbsp;For Your Home One Stop Destination ....</b>
+                </td>
+                <td style="text-align:right; " class="auto-style3">                   
+                </td>
+            </tr>
+            <tr>
+
+            </tr>
+             <tr>
+                <td colspan="3" style="height:40px">
+                    <ul>
+                        <li><a class ="active" href="Default.aspx">Home</a></li>                        
+                         <li><a class="active" href="Login.aspx"> Log In</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li><a class ="right" href="contact.aspx">Contact us</a></li>
+                            <li><a class ="right" href="about.aspx">About us</a></li>                    
+                        
+                    </ul>
+                </td>
+            </tr>
+            
+             <tr style="width:1000px; height:310px">
+                <td colspan="3">
+                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="3000"></asp:Timer>
+                            <asp:image  ID="Image1" runat="server" Height="237px" Width="1110px" BackColor="White" BorderColor="#999999"></asp:image>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </td>
+                 
+                 <tr>
+                 <td colspan="3">
+                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                     </asp:ContentPlaceHolder>
+
+                 </td>
+                     <br />
+                     <br />
+                </tr>
+            <tr style="width:1000px; height:25px; background-color:peachpuff; text-align: center; color:black">
+                 <td colspan="3">
+                     &copy; Online Furnituer Shopping | All Rights Reserved By Priyank
+                 </td>
+            </tr>
+        </table>
+
+       
+    </div>
+    </form>
+</body>
+
+</html>

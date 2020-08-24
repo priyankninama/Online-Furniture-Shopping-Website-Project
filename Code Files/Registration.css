@@ -1,0 +1,54 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-image: url(Images/Back.jpg);
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+.Regibox {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 1000px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.lblemail, .lblpass, .lblfname, .lbllname, .lbld, .lbladd, .lblco, .lblgen, .lblpho {
+    font-weight: bold;
+    color: #fff;
+}
+
+.txtemail, .txtpass, .txtfname, .txtlname, .txtdo, .txtadd, .txtco, .txtgen, .txtpho .btnsub {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btnsub {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    outline: none;
+    font-size: 20px;
+    color: #100101;
+    background-color: #e8baba;
+    cursor: pointer;
+    border-radius: 22px;
+    transition: 03s ease-in-out;
+}
+
+.lb {
+    overflow: hidden;
+}
